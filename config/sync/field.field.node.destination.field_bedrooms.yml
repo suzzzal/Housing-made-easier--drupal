@@ -1,0 +1,21 @@
+uuid: 77777777-7777-4777-8777-777777777777
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bedrooms
+    - node.type.destination
+id: node.destination.field_bedrooms
+field_name: field_bedrooms
+entity_type: node
+bundle: destination
+label: Bedrooms
+description: 'Number of bedrooms in this house.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: integer
+
+

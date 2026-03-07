@@ -1,0 +1,18 @@
+uuid: c599b102-185e-41d5-beb5-b335aa41aacc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: House
+type: destination
+description: 'A house or property available for booking.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

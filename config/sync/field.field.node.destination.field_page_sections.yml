@@ -1,0 +1,29 @@
+uuid: 940b67b3-5c1f-4526-b98c-da32c4bbf5de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_sections
+    - node.type.destination
+  module:
+    - entity_reference_revisions
+id: node.destination.field_page_sections
+field_name: field_page_sections
+entity_type: node
+bundle: destination
+label: 'Page Sections'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      text_and_image:
+        weight: 2
+        enabled: false
+field_type: entity_reference_revisions
