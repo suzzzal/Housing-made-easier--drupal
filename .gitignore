@@ -1,0 +1,8 @@
+/vendor/ 
+/web/core/ 
+/web/sites/*/files/ 
+/web/sites/*/settings.local.php 
+/web/modules/contrib/ 
+/web/themes/contrib/ 
+.ddev/ 
+.DS_Store 

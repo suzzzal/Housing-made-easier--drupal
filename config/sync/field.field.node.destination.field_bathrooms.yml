@@ -1,0 +1,21 @@
+uuid: 88888888-8888-4888-8888-888888888888
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bathrooms
+    - node.type.destination
+id: node.destination.field_bathrooms
+field_name: field_bathrooms
+entity_type: node
+bundle: destination
+label: Bathrooms
+description: 'Number of bathrooms in this house.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: integer
+
+

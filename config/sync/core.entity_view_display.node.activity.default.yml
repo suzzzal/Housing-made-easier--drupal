@@ -1,0 +1,41 @@
+uuid: 29ad7e97-65b5-4ccc-ae46-7b314a7cd42d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.activity.field_activity_photo
+    - field.field.node.activity.field_related_destination
+    - node.type.activity
+  module:
+    - image
+    - user
+id: node.activity.default
+targetEntityType: node
+bundle: activity
+mode: default
+content:
+  field_activity_photo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_related_destination:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
