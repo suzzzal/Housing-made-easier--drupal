@@ -1,0 +1,67 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function my_module_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  if ($form_id === 'node_article_form') {
+
+    // Attach JS library
+    $form['#attached']['library'][] = 'my_module/translator';
+
+    /*
+    -------------------------
+    TITLE BUTTON
+    -------------------------
+    */
+
+    if (isset($form['title']['widget'][0]['value'])) {
+
+      $form['title']['widget'][0]['wrapper'] = [
+        '#type' => 'container',
+        '#attributes' => [
+          'style' => 'display:flex; gap:15px; align-items:center;',
+        ],
+      ];
+
+      $form['title']['widget'][0]['wrapper']['title_input']
+        = $form['title']['widget'][0]['value'];
+
+      unset($form['title']['widget'][0]['value']);
+
+      $form['title']['widget'][0]['wrapper']['translate_button'] = [
+        '#type' => 'button',
+        '#value' => t('Translate'),
+        '#attributes' => [
+          'class' => ['button', 'button--primary'],
+          'style' => 'margin-top:42px;',
+        ],
+      ];
+    }
+
+    /*
+    -------------------------
+    BODY BUTTON
+    -------------------------
+    */
+
+    if (isset($form['body']['widget'][0])) {
+
+      $form['body']['widget'][0]['translate_button'] = [
+        '#type' => 'button',
+        '#value' => t('Translate'),
+        '#attributes' => [
+          'class' => ['button', 'button--primary'],
+          'style' => 'margin-top:8px; margin-left:10px;',
+        ],
+        '#weight' => 20,
+      ];
+
+    }
+
+  }
+
+}

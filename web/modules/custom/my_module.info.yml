@@ -1,0 +1,10 @@
+name: My Module
+type: module
+description: Adds a custom button to the Article editor.
+core_version_requirement: ^10 || ^11
+package: Custom
+translator:
+  js:
+    js/translator.js: {}
+  dependencies:
+    - core/drupal
